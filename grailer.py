@@ -70,9 +70,7 @@ class Inbox:
         '''Rotating the cache prevents multiple notifications for unread messages.'''
         for k in new.keys():
             if k in old.keys() and len(old[k]) > 0:
-                new[k] += old[k]
-                new[k].sort()
-                new[k] = new[k][-limit:]
+                new[k] = list(set(new[k]+old[k]))[-limit:]
         f = open(self.cache, 'w')
         json.dump(new, f)
         f.close()
@@ -100,7 +98,8 @@ class Inbox:
                     title = account['username']
                     message = 'From: %s\n%s' % (email.author_detail['name'], email.summary)
                     if not first_run:
-                        self.sendgrowl(title, message)
+                        #self.sendgrowl(title, message)
+                        print email_id
                 new_cache[account['username']].append(email_id)
         self.rotate_cache(new_cache, old_cache)
     
