@@ -66,7 +66,7 @@ class Inbox:
         notifier.register()
         notifier.notify(notifications[0], title, message, sticky=True)
     
-    def rotate_cache(self, new, old, limit=50):
+    def rotate_cache(self, new, old, limit=100):
         '''Rotating the cache prevents multiple notifications for unread messages.'''
         for k in new.keys():
             if k in old.keys() and len(old[k]) > 0:
