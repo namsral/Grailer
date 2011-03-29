@@ -2,6 +2,11 @@
 
 Get notified by Growl when new message arrive in your Gmail or Google Apps Gmail accounts.
 
+**Requirements**
+
+- Growl for Python
+- Feedparser for Python
+
 **Setup**
 
 1. Download or clone this project to a safe location:
