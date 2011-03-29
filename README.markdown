@@ -17,4 +17,4 @@ Get notified by Growl when new message arrive in your Gmail or Google Apps Gmail
         */10 * * * * /usr/bin/env python ~/.grailer/grailer.py --config-path ~/.grailer
 
 
-!On the first run Growl messages are suppressed to prevent Growl notifications overload.
+!On the first run, Growl messages are suppressed to prevent notification overload if you have lots of unread messages.
