@@ -1,11 +1,13 @@
 ## Grailer
 
-Get notified by Growl when new message arrive in your Gmail or Google Apps Gmail accounts.
+Receive Growl notifications when new messages arrive in your Gmail account. Supports multiple accounts, both regular Gmail and Google Apps Gmail. It's written in Python as a commandline utility to run from a cronjob or launchd.
+
 
 **Requirements**
 
 - Growl for Python
 - Feedparser for Python
+
 
 **Setup**
 
