@@ -98,8 +98,7 @@ class Inbox:
                     title = account['username']
                     message = 'From: %s\n%s' % (email.author_detail['name'], email.summary)
                     if not first_run:
-                        #self.sendgrowl(title, message)
-                        print email_id
+                        self.sendgrowl(title, message)
                 new_cache[account['username']].append(email_id)
         self.rotate_cache(new_cache, old_cache)
     
